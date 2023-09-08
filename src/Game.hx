@@ -13,6 +13,6 @@ class Game extends App {
 
     static function main() {
         new Game();
-		Res.initLocal();
+	Res.initLocal();
     }
 }
