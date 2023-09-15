@@ -10,9 +10,4 @@ class Game extends App {
     override function update(dt: Float) {
         
     }
-
-    static function main() {
-        new Game();
-	Res.initLocal();
-    }
 }

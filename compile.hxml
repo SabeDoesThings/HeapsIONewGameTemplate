@@ -4,8 +4,13 @@
 #
 #--------------------------------------
 -lib heaps
+
+#compile with hashlink
 -lib hlsdl
 #-lib hldx
+
+#compile with html5/js
+#-js script_to_embed_in_html_file.js
 
 #--------------------------------------
 #
@@ -33,7 +38,7 @@
 #
 #--------------------------------------
 
--main Game
+-main Main
 
 -hl heaps_template.hl
 
