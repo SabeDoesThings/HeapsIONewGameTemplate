@@ -1,4 +1,3 @@
-import hxd.Res;
 import hxd.App;
 
 class Game extends App {
