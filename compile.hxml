@@ -38,7 +38,7 @@
 #
 #--------------------------------------
 
--main Main
+-main GameApp
 
 -hl heaps_template.hl
 

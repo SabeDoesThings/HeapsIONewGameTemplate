@@ -1,33 +1,17 @@
 package core;
 
-import h2d.Bitmap;
-
-class Sprite extends Component{
-    var bmp: Bitmap;
-    public function new(attachee:GameObject, tile:h2d.Tile){
-        super(attachee);
-
-        type = "Sprite";
-        this.bmp = new Bitmap(tile);
-        bmp.setPosition(attachee.obj.x, attachee.obj.y);
-        bmp.rotation = attachee.obj.rotation;
-
-        scene.addChild(bmp);
-    }
-
-    public override function update(dt:Float){
-        bmp.setPosition(attachee.obj.x, attachee.obj.y);
-        bmp.rotation = attachee.obj.rotation;
-
-        // for the test game - remove if you're coding a new game
-        if(bmp.y < 0 || bmp.y > scene.height){
-            kill();
+class Sprites {
+    
+    // - be aware to chose chosenFrames *inside* of what exists!
+    public static function createAnimFromStrip(parent, image_resource:hxd.res.Image, speed, chosenFrames:Array<Int>, centered:Bool=true): h2d.Anim {
+        var height = image_resource.getSize().height;
+        var autoCount = Math.floor( image_resource.getSize().width / height );
+        var allFrames  = image_resource.toTile().split( autoCount );
+        for( f in allFrames ){
+            if( centered )
+                f.setCenterRatio();
         }
-    }
-
-    public function kill() {
-        trace("removing");
-        scene.removeChild(bmp);
-        Main.UpdateList.remove(attachee);
+        var frames = [ for( i in chosenFrames ) allFrames[i] ];
+        return new h2d.Anim( frames, speed, parent );
     }
 }
