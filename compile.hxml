@@ -40,7 +40,7 @@
 
 -main GameApp
 
--hl heaps_template.hl
+-hl game.hl
 
 #-D windowSize=400x300
 #-D windowSize=800x600
