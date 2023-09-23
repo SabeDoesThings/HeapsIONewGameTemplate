@@ -50,3 +50,4 @@
 #-D resourcesPath=assets ???
 #-D dce=full
 -D debug=true
+-D windowFixed=1
