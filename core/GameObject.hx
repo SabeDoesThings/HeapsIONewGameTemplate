@@ -1,7 +1,7 @@
 package core;
 
 import hxd.res.Image;
-import core.Sprite;
+import core.AnimCore;
 import h2d.col.Bounds;
 import h2d.Object;
 import h2d.Scene;
@@ -36,7 +36,7 @@ class GameObject extends Object {
 
     public function useAnimationFromSpriteStrip(image_resource: Image, speed, chosenFrames: Array<Int>, centered: Bool = true) {
         var oldsprite = sprite;
-        sprite = Sprites.createAnimFromStrip( this, image_resource, speed, chosenFrames, centered);
+        sprite = AnimCore.createAnimFromStrip( this, image_resource, speed, chosenFrames, centered);
         oldsprite.remove();
 
         return sprite;
