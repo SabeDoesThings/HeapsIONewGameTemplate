@@ -1,14 +1,11 @@
 package scenes;
 
 import hxd.App;
-import core.Level;
+import h2d.Scene;
 
-class TestScene extends Level {
+class TestScene extends Scene {
     public function new(app: App) {
         super();
-
-        var tf = new h2d.Text(hxd.res.DefaultFont.get(), this);
-        tf.text = "Hello Heaps.io";
     }
 
     public function init() {
