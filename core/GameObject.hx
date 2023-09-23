@@ -17,10 +17,6 @@ class GameObject extends Object {
         this.scene = scene;
     }
 
-    public function update() {
-        
-    }
-
     function get_hitbox() {
         hitbox.x = this.x;
         hitbox.y = this.y;
