@@ -4,26 +4,30 @@ import hxd.res.Image;
 import core.AnimCore;
 import h2d.col.Bounds;
 import h2d.Object;
-import h2d.Scene;
+import core.GameScene;
 
-class GameObject extends Object {
-    public var scene: Scene;
+abstract class GameObject extends Object {
+    public var scene: GameScene;
     public var sprite: Object;
     public var hitbox: Bounds;
 
-    public function new(scene: Scene) {
+    public function new(scene: GameScene) {
         super(scene);
         
         this.scene = scene;
+
+        scene.addEntity(this);
     }
 
-    function get_hitbox() {
+    public abstract function update(dt: Float): Void;
+
+    function getHitbox() {
         hitbox.x = this.x;
         hitbox.y = this.y;
         return hitbox;
     }
 
-    function set_sprite(obj: Object){
+    function setSprite(obj: Object){
         sprite = obj;
         sprite.parent = this;
 
@@ -36,5 +40,9 @@ class GameObject extends Object {
         oldsprite.remove();
 
         return sprite;
+    }
+
+    public function dispose(): Void {
+        sprite.remove();
     }
 }

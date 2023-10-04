@@ -1,17 +1,22 @@
+import core.GameScene;
 import scenes.TestScene;
 import hxd.App;
 
 class GameApp extends App {
-    public var testScene: TestScene;
+    public var gameScene: GameScene;
 
     override function init() {
-        testScene = new TestScene(this);
+        setGameScene(new TestScene(this));
+    }
 
-        setScene(testScene); //sets scene
+    function setGameScene(scene: GameScene, disposePrevious: Bool = true) {
+        super.setScene(scene, disposePrevious);
+
+        gameScene = scene;
     }
 
     override function update(dt: Float) {
-        testScene.update(); //runs any update functions in the current scene
+        gameScene.update(dt); //runs any update functions in the current scene
     }
 
     static function main() {

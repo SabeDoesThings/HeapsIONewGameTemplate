@@ -1,18 +1,13 @@
 package scenes;
 
+import core.GameScene;
 import hxd.App;
-import h2d.Scene;
 
-class TestScene extends Scene {
+class TestScene extends GameScene {
     public function new(app: App) {
-        super();
-    }
+        super(app);
 
-    public function init() {
-        
-    }
-
-    public function update() {
-        
+        var tf = new h2d.Text(hxd.res.DefaultFont.get(), this);
+        tf.text = "Hello Hashlink !";
     }
 }
