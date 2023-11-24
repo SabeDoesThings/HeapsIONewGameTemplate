@@ -9,5 +9,6 @@ class TestScene extends HScene {
 
         var tf = new h2d.Text(hxd.res.DefaultFont.get(), this);
         tf.text = "Hello Hashlink !";
+        tf.scale(4);
     }
 }
