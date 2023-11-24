@@ -4,14 +4,14 @@ import hxd.res.Image;
 import core.AnimCore;
 import h2d.col.Bounds;
 import h2d.Object;
-import core.GameScene;
+import src.HScene;
 
 abstract class GameObject extends Object {
-    public var scene: GameScene;
+    public var scene: HScene;
     public var sprite: Object;
     public var hitbox: Bounds;
 
-    public function new(scene: GameScene) {
+    public function new(scene: HScene) {
         super(scene);
         
         this.scene = scene;

@@ -1,9 +1,9 @@
 package scenes;
 
-import core.GameScene;
+import src.HScene;
 import hxd.App;
 
-class TestScene extends GameScene {
+class TestScene extends HScene {
     public function new(app: App) {
         super(app);
 
