@@ -1,5 +1,5 @@
 # Heaps.io New Game Template
-This is just a basic heaps.io template using hashlink that puts text to the screen, has a folder for putting entities in, an already set compile.hxml file, and has a folder called core that has classes that makes things easier when using heaps like animations and game objects.
+This is just a basic heaps.io template using hashlink that puts text to the screen, has a folder for putting entities in, and an already set compile.hxml file
 
 Tutorial: Coming Soon
 
