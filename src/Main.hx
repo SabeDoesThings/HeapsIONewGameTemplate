@@ -19,6 +19,6 @@ class Main extends hxd.App {
         hxd.Res.initEmbed(); // use hxd.Res.initEmbed(); for html5/js
         #end
 
-        inst = new Main();
+        inst;
     }
 }
