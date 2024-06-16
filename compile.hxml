@@ -6,8 +6,8 @@
 -lib heaps
 
 #compile with hashlink
-#-lib hlsdl
--lib hldx
+-lib hlsdl
+#-lib hldx
 -lib hlopenal
 
 #compile with html5/js
@@ -41,7 +41,7 @@
 
 -main Main
 
--hl game.hl
+-hl bin/game.hl
 
 #-D windowSize=400x300
 #-D windowSize=800x600
